@@ -7,6 +7,18 @@
 </div>
 <% end %>
 
+<div class="row">
+  <%= form_tag menu_path, class: "form-inline" ,method: :get do %>
+  <div class="form-group">
+    <label for="">Keyword</label>
+    <input type="text" class="form-control" name="q">
+  </div>
+  <button type="submit" class="btn btn-danger">Search</button>
+  <%end%>
+</div>
+
+
+
 <% @food_items.each do |food_item| %>
     <div class="card">
       <div class="card-header">

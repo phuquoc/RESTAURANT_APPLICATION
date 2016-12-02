@@ -9,7 +9,12 @@ class HomeController < ApplicationController
     if params[:section]
       @food_items = FoodItem.where section: params[:section]
     else
-      @food_items = FoodItem.all
+      if params[:q]
+        keyword = params[:q]
+        @food_items = FoodItem.search keyword 
+      else
+        @food_items = FoodItem.all
+      end
     end
   end
 end
