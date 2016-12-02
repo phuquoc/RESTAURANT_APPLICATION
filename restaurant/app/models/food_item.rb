@@ -1,6 +1,6 @@
 class FoodItem < ApplicationRecord
   validates :name, :section, :price, presence: true
-  belongs_to :section
+#  belongs_to :section
   def image_url
     if image.present?
       image
@@ -10,6 +10,15 @@ class FoodItem < ApplicationRecord
   end
 
   def self.search(keyword)
-    FoodItem.where('name like ?',"%#{keyword}%")
+    where('name like ?',"%#{keyword}%")
+  end
+
+
+  def self.name_order
+    order(:name)
+  end
+
+  def self.price_order
+    order(price: :desc)
   end
 end
