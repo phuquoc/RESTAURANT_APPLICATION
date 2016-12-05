@@ -6,6 +6,7 @@ class FoodItem < ApplicationRecord
       image
     else
       "http://loremflickr.com/320/240/#{CGI.escape name}"
+    # onchange="readURL(this)
     end
   end
 
