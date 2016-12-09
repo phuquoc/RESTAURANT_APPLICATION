@@ -10,6 +10,6 @@ class FoodItem < ApplicationRecord
   end
 
   def self.search(keyword)
-    FoodItem.where('name like ?',"%#{keyword}%")
+    FoodItem.where('name like ?',"%#{keyword}%")  
   end
 end

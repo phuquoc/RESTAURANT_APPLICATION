@@ -11,7 +11,7 @@ class HomeController < ApplicationController
     else
       if params[:q]
         keyword = params[:q]
-        @food_items = FoodItem.search keyword 
+        @food_items = FoodItem.search keyword
       else
         @food_items = FoodItem.all
       end
