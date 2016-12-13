@@ -1,0 +1,16 @@
+[
+  <% @food_items.each_with_index do |food_item, index| %>
+    {
+      "id": <%= food_item.id %>,
+      "name": "<%= food_item.name %>",
+      "description": "<%= food_item.description %>",
+      "price": "<%= food_item.price %>",
+      "image": "<%= food_item.image %>",
+      "created_at": "<%= food_item.created_at %>",
+      "updated_at": "<%= food_item.updated_at %>"
+
+
+    <%= index == (@food_items.length - 1)? '}' : '},' %>
+  <% end %>
+
+]
