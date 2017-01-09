@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require jquery.raty
+//= require ratyrate
  function readURL(input){
    if(input.files && input.files[0]){
      var reader = new FileReader();

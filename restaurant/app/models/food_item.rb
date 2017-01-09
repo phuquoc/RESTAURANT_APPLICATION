@@ -1,8 +1,7 @@
 class FoodItem < ApplicationRecord
   validates :name, :section, :price, presence: true
-#  belongs_to :section
-
-mount_uploader :image, AttachmentUploader # Tells rails to use this uploader for this model.
+   ratyrate_rateable  "price","image"
+   mount_uploader :image, AttachmentUploader # Tells rails to use this uploader for this model.
 
 
   def image_url

@@ -27,3 +27,14 @@
 
 <%= link_to 'Edit', edit_food_item_path(@food_item) %> |
 <%= link_to 'Back', food_items_path %>
+
+<div class="row">
+  <br>
+  <div class="small-2 large-4 columns">
+
+      Visual Effects: <%= rating_for @food_item, "price", stars: 10 %>
+      <br>
+      Original Score: <%= rating_for @food_item, "image", stars: 10 %>
+
+  </div>
+</div>
