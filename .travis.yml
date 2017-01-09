@@ -1,4 +1,4 @@
 language: ruby
 
 before_script:
-  - bundle exec rails s -d
+  - rails s
